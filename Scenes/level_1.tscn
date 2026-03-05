@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://ds75lvm8eqf4l"]
+[gd_scene load_steps=2 format=4 uid="uid://ds75lvm8eqf4l"]
+
+[ext_resource type="TileSet" uid="uid://bphy4st8ym4ie" path="res://Sprites/Tiles/new_tile_set.tres" id="1_vk57k"]
 
 [node name="Main" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAEAAAAAAD+/wIAAAAEAAAAAAD+/wMAAAAEAAAAAAD//wEAAAAEAAAAAAD//wIAAAAEAAAAAAD//wMAAAAEAAAAAAAAAAEAAAAEAAAAAAAAAAIAAAAEAAAAAAAAAAMAAAAEAAAAAAABAAEAAAAEAAAAAAABAAIAAAAEAAAAAAABAAMAAAAEAAAAAAA=")
+tile_set = ExtResource("1_vk57k")
