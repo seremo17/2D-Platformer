@@ -14,6 +14,17 @@ func _physics_process(delta):
 	
 	move_input = Input.get_axis("move_left", "move_right")
 	
-	velocity.x = move_input * move_speed
+	if move_input != 0:
+		velocity.x = lerp(velocity.x, move_input * move_speed, acceleration * delta)
+	
+	else:
+		velocity.x = lerp(velocity.x, 0.0, braking * delta)
+	
+	
+	
+	
+	if Input.is_action_pressed("jump") and is_on_floor():
+		velocity.y = -jump_force 
+	
 	
 	move_and_slide()
