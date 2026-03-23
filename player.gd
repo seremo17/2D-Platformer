@@ -8,6 +8,10 @@ extends CharacterBody2D
 
 var move_input : float 
 
+@onready var sprite : Sprite2D = $Sprite
+
+
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta 
@@ -26,5 +30,11 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force 
 	
-	
 	move_and_slide()
+	
+func _process(delta):
+	if velocity.x != 0:
+		sprite.flip_h = velocity.x > 0
+	
+	
+	
