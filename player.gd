@@ -60,4 +60,10 @@ func take_damage(amount : int):
 func game_over ():
 	get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
 	
+func increase_score (amount : int):
+	print ("increase_score")
+	
+	
+	
+	
 	
