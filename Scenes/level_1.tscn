@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=4 uid="uid://ds75lvm8eqf4l"]
+[gd_scene load_steps=8 format=4 uid="uid://ds75lvm8eqf4l"]
 
 [ext_resource type="TileSet" uid="uid://bphy4st8ym4ie" path="res://Sprites/Tiles/new_tile_set.tres" id="1_vk57k"]
 [ext_resource type="Texture2D" uid="uid://daddmg1hkc27d" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://dv0g1jn3n7ini" path="res://Scenes/player.tscn" id="3_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://u2b4k6a5qm08" path="res://Scenes/enemy.tscn" id="4_7p6j4"]
+[ext_resource type="Script" uid="uid://bdp3kxdybyxc8" path="res://Scripts/coin.gd" id="5_evi0p"]
+[ext_resource type="Texture2D" uid="uid://eaw0tcddq6vi" path="res://Sprites/Objects/tile_0151.png" id="6_lsmp6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrdnt"]
+radius = 7.071068
 
 [node name="Main" type="Node2D"]
 
@@ -22,29 +27,40 @@ move_speed = 85.0
 [node name="Enemy" parent="." instance=ExtResource("4_7p6j4")]
 position = Vector2(20, 48)
 
-[node name="Enemy" parent="Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(127, 42)
+[node name="Enemy2" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(147, 90)
 
-[node name="Enemy" parent="Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(103, 2)
+[node name="Enemy3" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(250, 92)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(119, 40)
+[node name="Enemy4" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(369, 132)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(118, 25)
+[node name="Enemy5" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(487, 157)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(198, 54)
+[node name="Enemy6" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(685, 211)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy/Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(74, 1)
+[node name="Enemy7" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(759, 212)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy/Enemy/Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(74, 1)
+[node name="Enemy8" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(833, 213)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy/Enemy/Enemy/Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(193, 27)
+[node name="Enemy9" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(1026, 240)
 
-[node name="Enemy" parent="Enemy/Enemy/Enemy/Enemy/Enemy/Enemy/Enemy/Enemy/Enemy" instance=ExtResource("4_7p6j4")]
-position = Vector2(-16, 0)
+[node name="Enemy10" parent="." instance=ExtResource("4_7p6j4")]
+position = Vector2(1010, 240)
+
+[node name="Coin" type="Area2D" parent="."]
+script = ExtResource("5_evi0p")
+
+[node name="Sprite" type="Sprite2D" parent="Coin"]
+position = Vector2(26, -11)
+texture = ExtResource("6_lsmp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
+position = Vector2(26, -11)
+shape = SubResource("CircleShape2D_xrdnt")
