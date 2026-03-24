@@ -36,7 +36,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	
 	
-	print("deal damage to player")
+	body.take_damage(1)
 	
 	
 	
