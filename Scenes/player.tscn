@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://miq1be7j6s70" path="res://Sprites/Objects/tile_0044.png" id="5_x3wgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
-radius = 6.443629
-height = 22.665611
+radius = 4.2957525
+height = 19.427668
 
 [sub_resource type="Animation" id="Animation_fkybt"]
 length = 0.001
