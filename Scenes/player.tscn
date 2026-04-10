@@ -121,16 +121,19 @@ offset_right = 401.0
 offset_bottom = 80.0
 
 [node name="Heart" type="TextureRect" parent="CanvasLayer/HeartContainer"]
+modulate = Color(1, 0.38039216, 0.4862745, 1)
 layout_mode = 2
 texture = ExtResource("5_x3wgy")
 expand_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="CanvasLayer/HeartContainer"]
+modulate = Color(1, 0.38039216, 0.4862745, 1)
 layout_mode = 2
 texture = ExtResource("5_x3wgy")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="CanvasLayer/HeartContainer"]
+modulate = Color(1, 0.38039216, 0.4862745, 1)
 layout_mode = 2
 texture = ExtResource("5_x3wgy")
 expand_mode = 2

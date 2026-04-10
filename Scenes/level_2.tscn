@@ -1,0 +1,170 @@
+[gd_scene load_steps=9 format=4 uid="uid://c8ta1wr1gs2vo"]
+
+[ext_resource type="Script" uid="uid://b8qko3r2kqddy" path="res://Scripts/background_parallax.gd" id="1_055b2"]
+[ext_resource type="Texture2D" uid="uid://bpkkj4i0lidm8" path="res://Sprites/Backgrounds/backgroundDesert.png" id="2_055b2"]
+[ext_resource type="TileSet" uid="uid://bphy4st8ym4ie" path="res://Sprites/Tiles/new_tile_set.tres" id="3_uhnj4"]
+[ext_resource type="PackedScene" uid="uid://dv0g1jn3n7ini" path="res://Scenes/player.tscn" id="4_42uki"]
+[ext_resource type="PackedScene" uid="uid://bj2wjre1h6or3" path="res://Scenes/coin.tscn" id="5_t7v2y"]
+[ext_resource type="PackedScene" uid="uid://u2b4k6a5qm08" path="res://Scenes/enemy.tscn" id="6_ait6c"]
+[ext_resource type="PackedScene" uid="uid://v4y3k3nglc6a" path="res://Scenes/end_flag.tscn" id="7_vcilj"]
+[ext_resource type="PackedScene" uid="uid://cw7lp67vp5x13" path="res://Scenes/menu.tscn" id="8_2mgoq"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(511, 0)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_055b2")
+
+[node name="BackgroundSprite8" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(1006, -556)
+texture = ExtResource("2_055b2")
+offset = Vector2(972, 132)
+
+[node name="BackgroundSprite7" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(-18, -556)
+texture = ExtResource("2_055b2")
+offset = Vector2(972, 132)
+
+[node name="BackgroundSprite6" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(-1042, -556)
+texture = ExtResource("2_055b2")
+offset = Vector2(972, 132)
+
+[node name="BackgroundSprite" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(-1022, 0)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite2" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(-972, -132)
+texture = ExtResource("2_055b2")
+offset = Vector2(972, 132)
+
+[node name="BackgroundSprite3" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(1022, 0)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite4" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(2046, 0)
+texture = ExtResource("2_055b2")
+
+[node name="BackgroundSprite5" type="Sprite2D" parent="Background"]
+modulate = Color(0.85490197, 0.5137255, 0.5882353, 1)
+position = Vector2(-2046, 0)
+texture = ExtResource("2_055b2")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+rotation = 1.5195617e-05
+tile_map_data = PackedByteArray("AAD+/wEAAAABAAYAAAD+/wIAAAABAAcAAAD//wEAAAACAAYAAAD//wIAAAACAAYAAAD//wMAAAABAAYAAAAAAAIAAAACAAYAAAAAAAMAAAADAAYAAAABAAIAAAADAAcAAAAAAAEAAAACAAYAAAABAAEAAAADAAYAAAAAAAQAAAADAAYAAAD//wQAAAABAAYAAAD//wUAAAABAAcAAAAAAAUAAAADAAcAAAD+/wAAAAABAAMAAAD//wAAAAACAAMAAAAAAAAAAAACAAMAAAABAAAAAAADAAMAAAAOAAAAAAAAAAIAAAARAP//AAAAAAIAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAYAAAAFAAIAAAAAAAYAAAAFAAMAAAAAAAYAAAAFAAQAAAAAAAYAAAAFAAUAAAAAAAYAAAALAAUAAAAAAAYAAAALAAQAAAAAAAYAAAALAAMAAAAAAAYAAAALAAIAAAAAAAYAAAALAAEAAAAAAAYAAAAFAAYAAAAAAAYAAAALAAYAAAAAAAYAAAALAAcAAAAAAAYAAAALAAgAAAAAAAYAAAAFAAcAAAAAAAYAAAAFAAgAAAAAAAYAAAAFAAkAAAAAAAYAAAAFAAoAAAAAAAYAAAALAAkAAAAAAAYAAAALAAoAAAAAAAYAAAALAAsAAAAAAAYAAAAFAAsAAAAAAAYAAAAFAAwAAAABAAcAAAALAAwAAAADAAcAAAAGAAwAAAACAAcAAAAHAAwAAAACAAcAAAAIAAwAAAACAAcAAAAJAAwAAAACAAcAAAAKAAwAAAACAAcAAAAGAAsAAAAIAAMAAAAHAAsAAAAIAAMAAAAIAAsAAAAIAAMAAAAJAAsAAAAIAAMAAAAKAAsAAAAIAAMAAAALAAAAAAAAAAMAAAAIAAAAAAAAAAIAAAAUAP7/AAAAAAIAAAAXAP3/AAABAAIAAAAYAP3/AAADAAIAAAAaAPv/AAAAAAIAAAAXAPn/AAAAAAIAAAAaAPf/AAAAAAIAAAAXAPX/AAAAAAIAAAAaAPP/AAAAAAIAAAAdAPP/AAABAAMAAAAeAPP/AAACAAMAAAAfAPP/AAACAAMAAAAgAPP/AAADAAMAAAAlAPP/AAABAAMAAAAmAPP/AAACAAMAAAAnAPP/AAACAAMAAAAoAPP/AAADAAMAAAAtAPP/AAABAAMAAAAuAPP/AAACAAMAAAAvAPP/AAACAAMAAAAwAPP/AAADAAMAAAAeAPT/AAACAAYAAAAeAPX/AAACAAYAAAAfAPT/AAACAAYAAAAfAPX/AAACAAYAAAAfAPb/AAACAAYAAAAmAPT/AAACAAYAAAAnAPT/AAACAAYAAAAmAPX/AAACAAYAAAAnAPX/AAACAAYAAAAnAPb/AAACAAYAAAAuAPT/AAACAAYAAAAvAPT/AAACAAYAAAAuAPX/AAACAAYAAAAvAPX/AAACAAYAAAAuAPb/AAACAAYAAAAmAPb/AAACAAYAAAAgAPT/AAADAAYAAAAgAPX/AAADAAYAAAAgAPb/AAADAAcAAAAfAPf/AAADAAcAAAAeAPf/AAABAAcAAAAeAPb/AAABAAYAAAAdAPX/AAABAAcAAAAdAPT/AAABAAYAAAAlAPT/AAABAAYAAAAlAPX/AAABAAYAAAAlAPb/AAABAAcAAAAmAPf/AAABAAcAAAAnAPf/AAADAAcAAAAoAPb/AAADAAcAAAAoAPX/AAADAAYAAAAoAPT/AAADAAYAAAAwAPT/AAADAAYAAAAwAPX/AAADAAcAAAAtAPT/AAABAAYAAAAtAPX/AAABAAYAAAAtAPb/AAABAAcAAAAuAPf/AAABAAcAAAAvAPf/AAADAAcAAAAvAPb/AAADAAYAAAA2APz/AAABAAMAAAA2AP3/AAABAAYAAAA2AP7/AAABAAcAAAA3APz/AAACAAMAAAA3AP3/AAACAAYAAAA3AP7/AAACAAYAAAA3AP//AAABAAYAAAA3AAAAAAABAAcAAAA4APz/AAACAAMAAAA4AP3/AAACAAYAAAA4AP7/AAACAAYAAAA4AP//AAACAAYAAAA+APz/AAABAAMAAAA+AP3/AAABAAYAAAA+AP7/AAABAAYAAAA+AP//AAABAAcAAAA/APz/AAACAAMAAAA/AP3/AAACAAYAAAA/AP7/AAACAAYAAAA/AP//AAACAAYAAAA/AAAAAAABAAcAAABAAPz/AAACAAMAAABAAP3/AAACAAYAAABAAP7/AAACAAYAAABAAP//AAACAAYAAABGAPz/AAABAAMAAABGAP3/AAABAAYAAABGAP7/AAABAAYAAABGAP//AAABAAcAAABHAPz/AAACAAMAAABHAP3/AAACAAYAAABHAP7/AAACAAYAAABHAP//AAACAAYAAABHAAAAAAABAAcAAABIAPz/AAACAAMAAABIAP3/AAACAAYAAABIAP7/AAACAAYAAAA4AAAAAAADAAcAAAA5APz/AAADAAMAAAA5AP3/AAADAAYAAAA5AP7/AAADAAYAAAA5AP//AAADAAcAAABAAAAAAAADAAcAAABBAPz/AAADAAMAAABBAP3/AAADAAYAAABBAP7/AAADAAYAAABBAP//AAADAAcAAABIAP//AAADAAYAAABIAAAAAAADAAcAAABJAPz/AAADAAMAAABJAP3/AAADAAYAAABJAP7/AAADAAcAAAAvAPL/AAAIAAQAAAABAP//AAAFAAQAAAD///H/AAAPAAQAAAD///L/AAAPAAUAAAD///P/AAAPAAUAAAD///T/AAAPAAUAAAD///X/AAAPAAUAAAD///b/AAAPAAUAAAD///f/AAAPAAUAAAD///j/AAAPAAUAAAD///n/AAAPAAUAAAD///r/AAAPAAUAAAD///v/AAAPAAUAAAD///z/AAAPAAUAAAD///3/AAAOAAYAAFAyAPz/AAAAAAIAAAA=")
+tile_set = ExtResource("3_uhnj4")
+
+[node name="Player" parent="." instance=ExtResource("4_42uki")]
+move_speed = 85.0
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin18" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1268, -72)
+
+[node name="Coin17" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1292, -70)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1254, -70)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1286, -72)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1260, -69)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(883, -71)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1284, -69)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(1275, -69)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(424, -198)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(397, -200)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(450, -164)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(398, -127)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(451, -90)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(407, -54)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(288, -16)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(181, -1)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(126, 0)
+
+[node name="Coin" parent="Coins" instance=ExtResource("5_t7v2y")]
+position = Vector2(73, 1)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(1156, -30)
+move_speed = 75.0
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(1205, -31)
+move_speed = 75.0
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(1183, -44)
+move_speed = 75.0
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(1037, -44)
+move_speed = 75.0
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(734, -193)
+move_speed = 75.0
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(587, -191)
+move_speed = 75.0
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(405, -112)
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(351, -5)
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(301, 13)
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(245, 32)
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("6_ait6c")]
+position = Vector2(20, 28)
+
+[node name="EndFlag" parent="." instance=ExtResource("7_vcilj")]
+position = Vector2(1176, -61)
+scene_to_load = ExtResource("8_2mgoq")
