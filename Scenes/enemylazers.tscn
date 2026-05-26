@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cxf85l4bm2rsd"]
 
 [ext_resource type="Script" uid="uid://cnvkmbo8e11kh" path="res://Scripts/enemy.gd" id="1_tf1e2"]
-[ext_resource type="Texture2D" uid="uid://bn2gkl22pnkth" path="res://Sprites/tile000.png" id="3_oqw4e"]
+[ext_resource type="Texture2D" uid="uid://b2espw5rvmtvc" path="res://Sprites/Objects/tile001.png" id="3_npof1"]
 [ext_resource type="Texture2D" uid="uid://cw8ve08co5tms" path="res://Sprites/Characters/character_0024.png" id="3_teib6"]
-[ext_resource type="Texture2D" uid="uid://dn3fjbeyd4f08" path="res://Sprites/tile007.png" id="4_my133"]
-[ext_resource type="Texture2D" uid="uid://43okrxstjpn6" path="res://Sprites/Characters/tile008.png" id="5_npof1"]
-[ext_resource type="Texture2D" uid="uid://uytq60sd2358" path="res://Sprites/Characters/tile009.png" id="6_7h67n"]
-[ext_resource type="Texture2D" uid="uid://ciuf1warptqbx" path="res://Sprites/Characters/tile010.png" id="7_pn4rb"]
+[ext_resource type="Texture2D" uid="uid://bpomdeb0j2m1m" path="res://Sprites/Objects/tile002.png" id="4_7h67n"]
+[ext_resource type="Texture2D" uid="uid://drh3mvt5s0q7y" path="res://Sprites/Objects/tile003.png" id="5_pn4rb"]
+[ext_resource type="Texture2D" uid="uid://cdavamtus2h6x" path="res://Sprites/Objects/tile007.png" id="6_7h67n"]
+[ext_resource type="Texture2D" uid="uid://cdt0y0y2i2f7j" path="res://Sprites/Objects/tile004.png" id="6_ppqi5"]
+[ext_resource type="Texture2D" uid="uid://dxj6s4x3avtus" path="res://Sprites/Objects/tile005.png" id="7_a08wx"]
+[ext_resource type="Texture2D" uid="uid://bpfhcrs37g8a8" path="res://Sprites/Objects/tile006.png" id="8_g7t76"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppqi5"]
 size = Vector2(10, 23)
@@ -28,7 +30,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_wrinw"]
 resource_name = "fly"
-length = 0.5
+length = 0.9
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -37,10 +39,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.4, 0.53333336),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668, 0.4, 0.53333336, 0.6666667, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_oqw4e"), ExtResource("4_my133"), ExtResource("5_npof1"), ExtResource("6_7h67n"), ExtResource("7_pn4rb")]
+"values": [ExtResource("3_npof1"), ExtResource("4_7h67n"), ExtResource("5_pn4rb"), ExtResource("6_ppqi5"), ExtResource("7_a08wx"), ExtResource("8_g7t76"), ExtResource("6_7h67n")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_af3po"]
