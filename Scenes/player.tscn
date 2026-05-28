@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dv0g1jn3n7ini"]
+[gd_scene load_steps=16 format=3 uid="uid://dv0g1jn3n7ini"]
 
 [ext_resource type="Script" uid="uid://ojd4u3qe7nsh" path="res://player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://dyq7dh6jlegru" path="res://Sprites/Characters/character_0000.png" id="1_v0iea"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cva4i4q883bsl" path="res://Scripts/camera_shake.gd" id="3_x3wgy"]
 [ext_resource type="Script" uid="uid://hfptd803ygap" path="res://Scripts/player_ui.gd" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://miq1be7j6s70" path="res://Sprites/Objects/tile_0044.png" id="5_x3wgy"]
+[ext_resource type="FontFile" uid="uid://dqghd6lwmp7nj" path="res://Sprites/Happysalvaje-Regular.ttf" id="7_3smsa"]
+[ext_resource type="Texture2D" uid="uid://c2ddji2s0u3kf" path="res://Sprites/Objects/coin for 3.png" id="8_8erm5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
 radius = 4.2957525
@@ -83,7 +85,8 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_3smsa"]
-font_size = 38
+font = ExtResource("7_3smsa")
+font_size = 70
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
 
@@ -139,10 +142,17 @@ layout_mode = 2
 texture = ExtResource("5_x3wgy")
 expand_mode = 2
 
-[node name="ScoreText" type="Label" parent="CanvasLayer"]
-offset_left = -1.0
-offset_top = 70.0
-offset_right = 324.0
-offset_bottom = 144.0
-text = "Score: 500"
+[node name="ScoreBox" type="HBoxContainer" parent="CanvasLayer"]
+offset_top = 100.0
+offset_right = 371.0
+offset_bottom = 194.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ScoreBox"]
+layout_mode = 2
+texture = ExtResource("8_8erm5")
+expand_mode = 3
+
+[node name="ScoreText" type="Label" parent="CanvasLayer/ScoreBox"]
+layout_mode = 2
+text = "500"
 label_settings = SubResource("LabelSettings_3smsa")

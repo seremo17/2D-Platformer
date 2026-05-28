@@ -10,7 +10,7 @@ extends Area2D
 
 func _ready ():
 	$AnimationPlayer.play("fly")
-	
+	$AnimationPlayer.play("lazers")
 	
 
 

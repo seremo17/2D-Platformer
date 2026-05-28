@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var health_container = $HeartContainer
 var hearts : Array = []
 
-@onready var score_text : Label = $ScoreText
+@onready var score_text : Label = $ScoreBox/ScoreText
 
 @onready var player = get_parent()
 
