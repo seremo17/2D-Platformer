@@ -6,9 +6,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_k1b7n"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 192, 175, 0, 0, 0, 0, 350, 18, 0, 0, 0, 0, 192, 175)
+"points": PackedVector2Array(0, 0, 0, 0, 191, 177, 0, 0, 0, 0, 212, 152, 0, 0, 0, 0, 348, 19, 0, 0, 0, 0, 226.52695, 140.19467, 0, 0, 0, 0, 192, 175)
 }
-point_count = 3
+point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f8lbu"]
 size = Vector2(32, 12)
@@ -37,6 +37,7 @@ region_enabled = true
 region_rect = Rect2(15.844837, 25.275486, 58.411648, 55.77834)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(-1, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
 position = Vector2(192, 175)
@@ -49,7 +50,7 @@ position = Vector2(192, 175)
 shape = SubResource("RectangleShape2D_f8lbu")
 
 [node name="MP_path" type="PathFollow2D" parent="."]
-position = Vector2(192, 175)
+position = Vector2(191, 177)
 rotates = false
 script = ExtResource("1_hrpga")
 

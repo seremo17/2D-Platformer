@@ -1,17 +1,26 @@
-[gd_scene load_steps=16 format=3 uid="uid://dv0g1jn3n7ini"]
+[gd_scene load_steps=26 format=3 uid="uid://dv0g1jn3n7ini"]
 
 [ext_resource type="Script" uid="uid://ojd4u3qe7nsh" path="res://player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://dyq7dh6jlegru" path="res://Sprites/Characters/character_0000.png" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://boym8rwk8fqpe" path="res://Sprites/Characters/character_0001.png" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://cva4i4q883bsl" path="res://Scripts/camera_shake.gd" id="3_x3wgy"]
 [ext_resource type="Script" uid="uid://hfptd803ygap" path="res://Scripts/player_ui.gd" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://m1utxyhlhws" path="res://Sprites/Characters/Space robber1.png" id="4_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://dafxqckno6aul" path="res://Sprites/Characters/Space robber2.png" id="5_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://miq1be7j6s70" path="res://Sprites/Objects/tile_0044.png" id="5_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://b8sncxp45qot8" path="res://Sprites/Characters/Space robber3.png" id="6_7dp3o"]
 [ext_resource type="FontFile" uid="uid://dqghd6lwmp7nj" path="res://Sprites/Happysalvaje-Regular.ttf" id="7_3smsa"]
+[ext_resource type="Texture2D" uid="uid://bw26wj8lodpyi" path="res://Sprites/Characters/Space robber4.png" id="7_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://c2ddji2s0u3kf" path="res://Sprites/Objects/coin for 3.png" id="8_8erm5"]
+[ext_resource type="Texture2D" uid="uid://dxr2jny6pt3e7" path="res://Sprites/Characters/Space robber jump1.png" id="8_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://blsoq1aw1ca11" path="res://Sprites/Characters/Space robber jump2.png" id="9_qqcod"]
+[ext_resource type="Texture2D" uid="uid://dkvagxtn1hq30" path="res://Sprites/Characters/Space robber jump3.png" id="10_igrcy"]
+[ext_resource type="Texture2D" uid="uid://c2bru53inix4x" path="res://Sprites/Characters/Space robber jump4.png" id="11_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://vh5rnrkkyjxm" path="res://Sprites/Characters/Space robber run1.png" id="12_igrcy"]
+[ext_resource type="Texture2D" uid="uid://dbaxdxieqw733" path="res://Sprites/Characters/Space robber run2.png" id="13_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://bx5s08f73do42" path="res://Sprites/Characters/Space robber run3.png" id="14_l6n3p"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
-radius = 4.2957525
-height = 19.427668
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igrcy"]
+size = Vector2(6.4436293, 21.04664)
 
 [sub_resource type="Animation" id="Animation_fkybt"]
 length = 0.001
@@ -31,37 +40,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_vgqql"]
 resource_name = "idle"
 length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_v0iea")]
-}
-
-[sub_resource type="Animation" id="Animation_6t5aa"]
-resource_name = "jump"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_6t5aa")]
-}
-
-[sub_resource type="Animation" id="Animation_x3wgy"]
-resource_name = "move"
-length = 0.25
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -70,10 +48,44 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_6t5aa"), ExtResource("1_v0iea")]
+"values": [ExtResource("4_pu2lt"), ExtResource("5_ukyrk"), ExtResource("6_7dp3o"), ExtResource("7_h4iuc")]
+}
+
+[sub_resource type="Animation" id="Animation_6t5aa"]
+resource_name = "jump"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_fd4e3"), ExtResource("9_qqcod"), ExtResource("10_igrcy"), ExtResource("11_fs7ks")]
+}
+
+[sub_resource type="Animation" id="Animation_x3wgy"]
+resource_name = "move"
+length = 0.32
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("12_igrcy"), ExtResource("13_fs7ks"), ExtResource("14_l6n3p")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3smsa"]
@@ -97,13 +109,13 @@ jump_force = 210.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0.53696907, -10.52332)
-scale = Vector2(0.61186856, 0.9245718)
+position = Vector2(0, -8.094861)
+scale = Vector2(0.4905174, 0.74054676)
 texture = ExtResource("1_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -9.713834)
-shape = SubResource("CapsuleShape2D_v0iea")
+position = Vector2(-0.53696907, -7.2853756)
+shape = SubResource("RectangleShape2D_igrcy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -12.142292)

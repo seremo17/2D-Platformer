@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cw7lp67vp5x13"]
+[gd_scene load_steps=6 format=3 uid="uid://cw7lp67vp5x13"]
 
 [ext_resource type="Script" uid="uid://ckm20ddnrw0kc" path="res://Scripts/menu.gd" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://m253f0jniu07" path="res://Sprites/Backgrounds/885542.png" id="2_cayip"]
@@ -14,7 +14,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_wwsa2"]
 
-[node name="Menu" type="Control" unique_id=251322719]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xhh6f")
 
-[node name="TextureRect7" type="TextureRect" parent="." unique_id=1930704419]
+[node name="TextureRect7" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = -1999.0
@@ -38,7 +38,7 @@ texture = ExtResource("2_cayip")
 expand_mode = 4
 flip_v = true
 
-[node name="TextureRect8" type="TextureRect" parent="." unique_id=32238845]
+[node name="TextureRect8" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = -28.0
@@ -49,7 +49,7 @@ texture = ExtResource("2_cayip")
 expand_mode = 4
 flip_v = true
 
-[node name="TextureRect9" type="TextureRect" parent="." unique_id=1684999720]
+[node name="TextureRect9" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = 1915.0
@@ -60,7 +60,7 @@ texture = ExtResource("2_cayip")
 expand_mode = 4
 flip_v = true
 
-[node name="TextureRect4" type="TextureRect" parent="." unique_id=1945426542]
+[node name="TextureRect4" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = -1995.0
@@ -71,7 +71,7 @@ texture = ExtResource("2_cayip")
 expand_mode = 4
 flip_v = true
 
-[node name="TextureRect5" type="TextureRect" parent="." unique_id=2144577910]
+[node name="TextureRect5" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = -33.0
@@ -82,7 +82,7 @@ texture = ExtResource("2_cayip")
 expand_mode = 4
 flip_v = true
 
-[node name="TextureRect6" type="TextureRect" parent="." unique_id=680103019]
+[node name="TextureRect6" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = 1928.0
@@ -93,7 +93,7 @@ texture = ExtResource("2_cayip")
 expand_mode = 4
 flip_v = true
 
-[node name="TextureRect3" type="TextureRect" parent="." unique_id=2065814314]
+[node name="TextureRect3" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = -2002.0
@@ -103,7 +103,7 @@ offset_bottom = 1176.0
 texture = ExtResource("2_cayip")
 expand_mode = 4
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=243998645]
+[node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = -31.0
@@ -113,7 +113,7 @@ offset_bottom = 1178.0
 texture = ExtResource("2_cayip")
 expand_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=636676625]
+[node name="TextureRect2" type="TextureRect" parent="."]
 modulate = Color(0.6313726, 0.14901961, 1, 1)
 layout_mode = 0
 offset_left = 1912.0
@@ -123,7 +123,7 @@ offset_bottom = 1175.0
 texture = ExtResource("2_cayip")
 expand_mode = 4
 
-[node name="Title" type="Label" parent="." unique_id=167761030]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -143,42 +143,7 @@ label_settings = SubResource("LabelSettings_xhh6f")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayButton" type="Button" parent="." unique_id=509254744]
-modulate = Color(0, 1, 1, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -43.0
-offset_right = 122.0
-offset_bottom = 34.0
-grow_horizontal = 2
-grow_vertical = 2
-flat = true
-
-[node name="QuitButton" type="Button" parent="." unique_id=1308608849]
-modulate = Color(0, 1, 1, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -121.0
-offset_top = 48.0
-offset_right = 123.0
-offset_bottom = 125.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "
-"
-icon = SubResource("ViewportTexture_wwsa2")
-flat = true
-
-[node name="Title2" type="Label" parent="." unique_id=1045510083]
+[node name="Title2" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -198,7 +163,7 @@ label_settings = SubResource("LabelSettings_xhh6f")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title2" type="Label" parent="Title2" unique_id=1608742063]
+[node name="Title2" type="Label" parent="Title2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -217,6 +182,41 @@ text = "Ouit?
 label_settings = SubResource("LabelSettings_xhh6f")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -43.0
+offset_right = 122.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="QuitButton" type="Button" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = 48.0
+offset_right = 123.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+"
+icon = SubResource("ViewportTexture_wwsa2")
+flat = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
