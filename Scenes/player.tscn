@@ -11,10 +11,10 @@
 [ext_resource type="FontFile" uid="uid://dqghd6lwmp7nj" path="res://Sprites/Happysalvaje-Regular.ttf" id="7_3smsa"]
 [ext_resource type="Texture2D" uid="uid://bw26wj8lodpyi" path="res://Sprites/Characters/Space robber4.png" id="7_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://c2ddji2s0u3kf" path="res://Sprites/Objects/coin for 3.png" id="8_8erm5"]
-[ext_resource type="Texture2D" uid="uid://dxr2jny6pt3e7" path="res://Sprites/Characters/Space robber jump1.png" id="8_fd4e3"]
-[ext_resource type="Texture2D" uid="uid://blsoq1aw1ca11" path="res://Sprites/Characters/Space robber jump2.png" id="9_qqcod"]
-[ext_resource type="Texture2D" uid="uid://dkvagxtn1hq30" path="res://Sprites/Characters/Space robber jump3.png" id="10_igrcy"]
-[ext_resource type="Texture2D" uid="uid://c2bru53inix4x" path="res://Sprites/Characters/Space robber jump4.png" id="11_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://bcamo3dykm0cu" path="res://Sprites/Characters/new space jump1.png" id="8_igrcy"]
+[ext_resource type="Texture2D" uid="uid://d4lty8em7lmwp" path="res://Sprites/Characters/new space jump2.png" id="9_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://cflokutmji6k8" path="res://Sprites/Characters/new space jump3.png" id="10_l6n3p"]
+[ext_resource type="Texture2D" uid="uid://ddybvqsc3jk0e" path="res://Sprites/Characters/new space jump4.png" id="11_olqyp"]
 [ext_resource type="Texture2D" uid="uid://vh5rnrkkyjxm" path="res://Sprites/Characters/Space robber run1.png" id="12_igrcy"]
 [ext_resource type="Texture2D" uid="uid://dbaxdxieqw733" path="res://Sprites/Characters/Space robber run2.png" id="13_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://bx5s08f73do42" path="res://Sprites/Characters/Space robber run3.png" id="14_l6n3p"]
@@ -68,7 +68,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_fd4e3"), ExtResource("9_qqcod"), ExtResource("10_igrcy"), ExtResource("11_fs7ks")]
+"values": [ExtResource("8_igrcy"), ExtResource("9_fs7ks"), ExtResource("10_l6n3p"), ExtResource("11_olqyp")]
 }
 
 [sub_resource type="Animation" id="Animation_x3wgy"]
