@@ -833,11 +833,6 @@ position = Vector2(259, -392)
 rotation = 0.16628772
 texture = ExtResource("14_0asjg")
 
-[node name="Player" parent="." instance=ExtResource("5_u1hde")]
-position = Vector2(-69, -189)
-move_speed = 85.0
-gravity = 350.0
-
 [node name="Decor6" type="Sprite2D" parent="."]
 modulate = Color(0.27730417, 0.27730417, 0.27730417, 1)
 position = Vector2(706, 18.00003)
@@ -853,7 +848,7 @@ texture = ExtResource("15_xws08")
 [node name="Decor10" type="Sprite2D" parent="."]
 position = Vector2(828.99994, -518)
 rotation = -0.09698107
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_yjokl")
 
 [node name="Decor3" type="Sprite2D" parent="."]
@@ -882,6 +877,11 @@ modulate = Color(0.3770668, 0.3770668, 0.3770668, 1)
 position = Vector2(1180, 33)
 rotation = 0.70807564
 texture = ExtResource("15_xws08")
+
+[node name="Player" parent="." instance=ExtResource("5_u1hde")]
+position = Vector2(-69, -189)
+move_speed = 85.0
+gravity = 350.0
 
 [node name="BG_music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_yf7w6")
