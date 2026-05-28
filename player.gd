@@ -17,7 +17,7 @@ var move_input : float
 @onready var anim : AnimationPlayer = $AnimationPlayer
 @onready var audio : AudioStreamPlayer = $AudioStreamPlayer
 
-
+var is_dead := false
 var hurt_sound_end := -1.0
 var take_damage_sfx : AudioStream = preload("res://Audio/Hurt_sound_effect.mp3")
 var coin_sfx : AudioStream = preload("res://Audio/Coin_Collect.mp3")
@@ -57,8 +57,8 @@ func _process(delta):
 	
 	
 	
-	if global_position.y >200:
-		game_over()
+	if global_position.y > 200 and not is_dead:
+		die_from_fall()
 	
 	_manage_animation()
 	
@@ -78,7 +78,7 @@ func take_damage(amount : int):
 	_damage_flash()
 	
 	
-	if health <= 0:
+	if health <= 0 :
 		await dead_sound_cut()
 		game_over()
 	else:
@@ -111,6 +111,12 @@ func take_damage_sound_cut(start_time: float, end_time: float):
 	hurt_sound_end = 2.08
 
 
+
+
+func die_from_fall():
+	is_dead = true
+	await dead_sound_cut()
+	game_over()
 
 func dead_sound_cut():
 	var start := 3.05
