@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=4 uid="uid://d3lpao0f88og3"]
+[gd_scene load_steps=22 format=4 uid="uid://d3lpao0f88og3"]
 
 [ext_resource type="Script" uid="uid://b8qko3r2kqddy" path="res://Scripts/background_parallax.gd" id="1_ib1bs"]
 [ext_resource type="Texture2D" uid="uid://cg2ee6rxmpaa6" path="res://Sprites/Objects/decor_7.png" id="3_yjokl"]
 [ext_resource type="Texture2D" uid="uid://bv8dmt7uxm5i4" path="res://Sprites/Backgrounds/Nebula Blue.png" id="4_eeb1d"]
 [ext_resource type="PackedScene" uid="uid://bvmdlqjl14lja" path="res://Scenes/coinlvl3.tscn" id="4_ib1bs"]
+[ext_resource type="PackedScene" uid="uid://bl58a6oc0m88m" path="res://moving_platform.tscn" id="5_78ms6"]
 [ext_resource type="PackedScene" uid="uid://dv0g1jn3n7ini" path="res://Scenes/player.tscn" id="5_u1hde"]
 [ext_resource type="PackedScene" uid="uid://bhtlcmh5du43g" path="res://Scenes/enemylvl3.tscn" id="5_yjokl"]
 [ext_resource type="PackedScene" uid="uid://cxf85l4bm2rsd" path="res://Scenes/enemylazers.tscn" id="6_ib1bs"]
@@ -502,10 +503,13 @@ position = Vector2(-17.999998, -192.99998)
 rotation = 0.1729451
 texture = ExtResource("3_yjokl")
 
+[node name="Path2D" parent="." instance=ExtResource("5_78ms6")]
+position = Vector2(-210, -406)
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin7" parent="Coins" instance=ExtResource("4_ib1bs")]
-position = Vector2(-60.000004, -46)
+position = Vector2(-57.000004, -63)
 rotation = -0.02037854
 scale = Vector2(0.2, 0.5)
 

@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl58a6oc0m88m"]
+
+[ext_resource type="Script" uid="uid://bcp4nfd4mndm5" path="res://mp_path.gd" id="1_hrpga"]
+[ext_resource type="Texture2D" uid="uid://dft7pj1wbe8eb" path="res://Sprites/Objects/tile012.png" id="1_q06lf"]
+[ext_resource type="Texture2D" uid="uid://clhi156du7hap" path="res://Sprites/Objects/tile032.png" id="3_f8lbu"]
+
+[sub_resource type="Curve2D" id="Curve2D_k1b7n"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 192, 175, 0, 0, 0, 0, 350, 18, 0, 0, 0, 0, 192, 175)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8lbu"]
+size = Vector2(32, 12)
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_k1b7n")
+
+[node name="RodGroup" type="Node2D" parent="."]
+position = Vector2(218, 151)
+
+[node name="Sprite2D" type="Sprite2D" parent="RodGroup"]
+texture = ExtResource("3_f8lbu")
+region_enabled = true
+region_rect = Rect2(15.844837, 25.275486, 58.411648, 55.77834)
+
+[node name="Sprite2D2" type="Sprite2D" parent="RodGroup"]
+position = Vector2(54, -54)
+texture = ExtResource("3_f8lbu")
+region_enabled = true
+region_rect = Rect2(15.844837, 25.275486, 58.411648, 55.77834)
+
+[node name="Sprite2D3" type="Sprite2D" parent="RodGroup"]
+position = Vector2(105, -105)
+texture = ExtResource("3_f8lbu")
+region_enabled = true
+region_rect = Rect2(15.844837, 25.275486, 58.411648, 55.77834)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(192, 175)
+texture = ExtResource("1_q06lf")
+region_enabled = true
+region_rect = Rect2(22.413345, 53.912598, 31.544449, 10.865311)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(192, 175)
+shape = SubResource("RectangleShape2D_f8lbu")
+
+[node name="MP_path" type="PathFollow2D" parent="."]
+position = Vector2(192, 175)
+rotates = false
+script = ExtResource("1_hrpga")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="MP_path"]
+position = Vector2(-192, -175)
+remote_path = NodePath("../../AnimatableBody2D")
